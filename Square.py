@@ -61,9 +61,9 @@ try:
 
 
 
-        for i in range (4):
+        for i in range(4):
             sendmsg('forward 100')
-            sendmsg ('cw 90')
+            sendmsg('cw 90')
 
         sendmsg('land')
 
