@@ -30,7 +30,7 @@ def recv():
             break
 
 
-def sendmsg(msg, sleep = 6):
+def sendmsg(msg, sleep = 8):
     print("Sending: " + msg)
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
@@ -62,6 +62,8 @@ try:
 
         sendmsg('up 30', 8)
         sendmsg('forward 200', 8)
+        sendmsg('go 160 -25 50 60', 8)
+        sendmsg('curve 110 110 0 110 220 0 30', 10)
 
 
         sendmsg('land')
